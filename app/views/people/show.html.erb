@@ -1,0 +1,59 @@
+<div class="container">
+  <div id="person_detail">
+    <div id="person_avatar">
+<%= image_tag @person.person_photo.url %>
+    </div>
+    <div id="person_info">
+   <h1>
+      <%= @person.name %>
+   </h1>
+      <p> <%= @person.designation %></p>
+      <br />
+          <h3>&quot;<%= @person.title %>&quot;</h3>
+          <div id="person_desc">
+        <%= @person.description %>
+          </div>
+          <div id="person_activity">
+             <h2>RECENT ACTIVITY</h2>
+        <% for blog in @blogs %>
+          <p><h3><%= blog.title %></h3></p>
+        <p><%= blog.body %></p>
+
+      <% end %>
+          </div>
+    </div>
+  </div>
+</div>
+
+<% if current_admin %>
+  <p>
+  Admin Actions:
+  <%= link_to 'add work', :controller => 'interconnects', :action => 'new' , :id => @person.id %> |
+  <%= link_to 'add service', :controller => 'interservices', :action => 'new' , :id => @person.id %> |
+  <%= link_to 'Edit', edit_person_path(@person) %> |
+  <%= link_to 'Delete', person_path(@person), :method => :delete, :confirm => "Are you sure?" %>
+</p>
+<% end %>
+    
+
+<div id="person_meta">
+  <div class="person_module">
+    <h2>CONTACT ME</h2>
+  </div>
+<h2>RECENT WORK</h2>
+        <br />
+      <%@interconnects.each do |inter|%>
+        <% @image= Image.find(:first,:conditions => {:work_id => inter.work_id})%>
+              
+              <%= (image_tag @image.work_data.url, :size => '220x140')%>
+
+            &nbsp;<h3><%=h inter.work.project_name.capitalize %></h3>
+             <%end%>
+           
+</div>
+
+        
+   
+       
+
+   

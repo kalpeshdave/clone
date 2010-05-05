@@ -1,0 +1,9 @@
+<div class="image">
+<% fields_for "work[image_attributes][]", image do |p| %>
+  <p>
+    <%= p.label :Image %><br />
+    <%= p.file_field :work_data, :index => nil %>
+    <%= link_to_function "delete", "remove_field($(this), ('.image'))" %>
+  </p>
+<% end %>
+</div>

@@ -1,0 +1,16 @@
+
+ <% @blogs.each do |blog| %>
+<div class="blog_entry">
+  <div class="blog_avatar">
+    <%= link_to (image_tag blog.person.person_photo.url, :size => "100x140"), :controller => 'people', :action => 'show', :id => blog.person.id%>
+    </div>
+    <div class="blog_info">
+    <h2><%=link_to blog.title.capitalize, blog %></h2><br />
+      <%=h blog.body %>
+</div>
+</div>
+
+<% end %>
+
+
+

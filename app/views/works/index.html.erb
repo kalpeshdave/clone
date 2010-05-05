@@ -1,0 +1,41 @@
+<div id="work">
+<%= render :partial => 'work' %>
+</div>
+
+<div class="bootam_block2">
+<div class="bootam_right">
+<div class="sidebar_bg">
+<div class="sidebar_btn">
+ <h2>MARKETS</h2>
+<%= link_to 'Arts & Entertainment', :action => 'market', :id => 1 %><br />
+<%= link_to 'Commerce', :action => 'market', :id => 2 %><br />
+<%= link_to 'Medicine/Healthcare', :action => 'market', :id => 3 %><br />
+<%= link_to 'Non-Profit', :action => 'market', :id => 4 %><br />
+<%= link_to 'Recruiting', :action => 'market', :id => 5 %><br />
+<%= link_to 'Twitter', :action => 'market', :id => 6 %><br />
+
+<br /><br />
+
+<h2>EXPERIENCE</h2>
+<%= link_to 'E-Commerce', :action => 'experience', :id => 1 %><br />
+<%= link_to 'Facebook Integration',:action => 'experience', :id => 2 %><br />
+<%= link_to 'MongoDB', :action => 'experience', :id => 3 %><br />
+<%= link_to 'RubyonRails', :action => 'experience', :id => 4 %><br />
+<%= link_to 'Social Networking', :action => 'experience', :id => 5 %><br />
+<%= link_to 'Twitter Integration', :action => 'experience', :id => 6 %><br />
+<%= link_to 'White Label', :action => 'experience', :id => 7 %><br />
+</div>
+</div>
+</div>
+</div>
+
+
+
+<br />
+<% if current_admin %>
+ <p>
+  Admin Actions:
+  <%= link_to 'New', new_work_path(@work) %> |
+
+</p>
+<% end %>

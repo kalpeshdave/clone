@@ -1,0 +1,27 @@
+<div class="container">
+  <div id="people">
+  <%= render :partial => 'person' %>
+</div>
+
+
+<div class="bootam_block2">
+<div class="bootam_right">
+<div class="navigation_btn">
+ <h2>Type</h2>
+<%= link_to 'Developer', :action => 'type', :id => 1 %><br />
+<%= link_to 'Designer', :action => 'type', :id => 2 %><br />
+<%= link_to 'Principals', :action => 'type', :id => 3 %><br />
+<br /><br />
+
+<h2>Location</h2>
+<%= link_to 'Chicago', :action => 'location', :id => 1 %><br />
+<%= link_to 'Chile', :action => 'location', :id => 2 %><br />
+<%= link_to 'Jacksonvilla', :action => 'location', :id => 3 %><br />
+</div>
+</div>
+</div>
+</div>
+
+  
+
+

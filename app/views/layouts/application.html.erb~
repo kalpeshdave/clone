@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title><%= @title %></title>
+<%= stylesheet_link_tag 'main' %>
+<%= javascript_include_tag :defaults  %>
+<%= render :partial => 'layouts/javascript' %>
+<%= yield :head %>
+</head>
+
+<body>
+<div id="container">
+<%- flash.each do |name, msg| -%>  
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>  
+      <%- end -%>
+  
+      
+      <div id="topwarp">
+	      <div class="logo">
+		  </div>
+	  </div>
+	  <div id="headermain">
+	      <div class="header">
+		     <%= render :partial => 'layouts/menu' %>
+			 <div class="headerflash">
+				<div id="slideshow">
+				    <img src="../images/flash_img.png" alt="" class="active" />
+    				    <img src="../images/image2.jpg" alt="" />
+    				 </div>
+			 </div>
+		  </div>
+	  </div>
+	  <div id="middlemainwarp">
+	    <div class="middlemainbg">
+		 <div class="middle_topblock">
+		   <br /> <%= yield -%>
+		</div>
+ 		</div>
+	    </div>
+
+     <% if current_admin %>
+        <p><%= link_to 'Logout', admin_session_path(current_admin_session), :method => :delete %></p>
+      <% else %>
+        <p><%= link_to 'Login', new_admin_session_path %></p>
+      <% end %>
+	  
+	  <div class="footar">
+	    <%= render :partial => 'layouts/footer' %>
+	   </div>
+</div>
+</body>
+</html>

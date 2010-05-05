@@ -1,0 +1,28 @@
+<div id="moogaloop" style="width: 504px; height: 340px;"></div>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+	<script type="text/javascript">
+		var video_id = 8229614;
+		var moogaloop = false;
+
+
+		// Run the javascript when the page is ready
+		var swf_id = 'moogaloop';
+
+	 	var flashvars = {
+	        clip_id: video_id,
+	        show_portrait: 1,
+	        show_byline: 1,
+	        show_title: 1,
+			js_api: 1, // required in order to use the Javascript API
+			js_onLoad: 'vimeo_player_loaded', // moogaloop will call this JS function when it's done loading (optional)
+			js_swf_id: 'moogaloop' // this will be passed into all event methods so you can keep track of multiple moogaloops (optional)
+	    };
+		var params = {
+			allowscriptaccess: 'always',
+			allowfullscreen: 'true'
+		};
+		var attributes = {};
+
+		// For more SWFObject documentation visit: http://code.google.com/p/swfobject/wiki/documentation
+		swfobject.embedSWF("http://vimeo.com/moogaloop.swf", swf_id, "280", "240", "9.0.0","expressInstall.swf", flashvars, params, attributes);
+	</script>

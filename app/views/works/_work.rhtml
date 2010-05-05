@@ -1,0 +1,13 @@
+        <%for work in @works%>
+        <% @image= Image.find(:first,:conditions => {:work_id => work.id})%>
+<div class="project">
+              <%=link_to (image_tag @image.work_data.url, :size => '220x140'),
+                :action => 'show' , :id => work.id %>
+        <h3><%=h work.project_name.capitalize %></h3>
+</div>
+        <% end %>
+        
+  
+ 
+    
+  

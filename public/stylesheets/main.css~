@@ -1,0 +1,433 @@
+/* CSS Document */
+
+body{
+	font-family:Helvetica,Arial,sans-serif;	
+	background-color:#F6F5F0; 
+	margin:0px;
+        padding:0px;
+        font-size: 12px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        line-height: 18px;
+}
+
+#topwarp{width:920px; height:110px; margin:auto;}
+
+.logo{width:177px; height:97px; float:left; margin-top:10px; margin-left:20px; background-image:url(../images/logo.png);}
+
+#headermain{width:920px; height:320px; margin:auto;}
+
+.header{width:920px; height:315px; background-image:url(../images/header_bg.png);}
+
+.headerflash{width:892px; height:242px; margin-left:15px; margin-top:20px; background-image: url(../images/flash_img.png);}
+
+.navigationmain{width:892px; height:40px; margin-top:10px; margin-left:15px;}
+
+.navigation_bg{width:892px; height:43px; background-image:url(../images/navigation.png); background-repeat:no-repeat; margin-top:10px;  float:left;}
+
+.navigation_btn{width:680px; height:20px;   float:left; margin-top:10px; font-family:Arial; font-size:11px; font-weight:bold; line-height:20px; margin-left:5px; }
+
+.navigation_btn a{width:40px; height:120px;  padding-left:20px; padding-right: 20px; border-right:#FF0000; border-right-style:outset; border-right-width:thin; text-decoration:none; color:#CB0F1B;}
+
+.navigation_btn a:hover{color:#CB0F1B; text-decoration:underline;}
+
+.navigation_quickmenu{width:100px;  float:right; margin-top:10px; margin-right:5px;}
+
+.form{width:185px; height:23px;  background:url(../images/form.jpg) no-repeat; margin-right:2px;}
+
+#middlemainwarp{width:920px; height:auto; margin:auto;}
+
+.middlemainbg{width:920px; height:482px; background-image: url(../images/middle_bg.png);}
+
+.middle_topblock{width:900px; height:700px; margin-top:0px; margin-left:10px;}
+
+.top_block1{width:272px; height:168px; float:left; margin-top:20px; margin-left:10px;}
+
+.top_block2{width:272px; height:168px; float:left; margin-top:20px; margin-left:20px; }
+
+.top_webdesign{width:272px; height:62px; background-image:url(../images/top_block1.jpg);}
+
+.top_logo{width:272px; height:62px; background-image:url(../images/top_logo.jpg);}
+
+.top_block3{width:272px; height:168px; float:left; margin-top:20px; margin-left:50px; }
+
+.top_development{width:272px; height:62px; background-image:url(../images/top_development.jpg);}
+
+.middle_bootamblock{width:900px; height:190px; margin-top:0px; margin-left:10px;}
+
+.bottum{width:604px; height:170px; float:left; margin-top:15px; }
+
+.news{width:300px; height:32px; background-image:url(../images/bootam_news.jpg); background-repeat: no-repeat}
+
+.top_left_bot{width:272px; height:90px;float: left; font-family: Arial, Helvetica, sans-serif;font-size: 12px;}
+
+.bootam_block2{width:180px; height:1000px; float:left; margin-top:0px; margin-left:10px;}
+
+.bootam_right{width:180px; height:1000px;float: left; font-family: Arial, Helvetica, sans-serif;font-size: 12px;}
+
+.footar{width:920px; height:30px; margin:auto;}
+
+.footar_contant{width:500px; height:10px; margin-left:20px; margin-top:5px; font-family:Arial; color:#BDB695; font-size:11px;}
+
+.sidebar_bg{width:892px; height:43px; margin-top:10px;  float:left;}
+
+.sidebar_btn{width:680px; height:20px;   float:left; margin-top:0px; font-family:Arial; font-size:11px; font-weight:bold; line-height:20px; margin-left:5px; }
+
+.sidebar_btn a{width:40px; height:120px;  padding-left:20px; padding-right: 20px; text-decoration:none; color:#CB0F1B;}
+
+.sidebar_btn a:hover{color:#CB0F1B; text-decoration:underline;}
+
+/*---------------------------PEOPLE-----------------------------*/
+
+.container {
+margin:0 10px;
+width:920px;
+}
+
+#people {
+float:right;
+width:720px;
+}
+
+.person {
+display: inline;
+float:left;
+margin:0 20px 24px 0;
+width:160px;
+}
+.person a{color:white;}
+.person a:hover{color:white;}
+#person_detail {
+float:left;
+width:600px;
+}
+#person_avatar {
+display:inline;
+float:left;
+margin-right:20px;
+width:220px;
+}
+#person_info {
+float:left;
+width:350px;
+text-align: justify;
+}
+#person_desc {
+margin:24px 0;
+}
+#person_activity {
+margin-top:24px;
+}
+#person_meta {
+float:right;
+width:260px;
+}
+.person_module {
+float:left;
+margin-bottom:24px;
+width:220px;
+}
+.person_module {
+float:left;
+margin-bottom:24px;
+width:220px;
+}
+.person_module .project {
+margin-bottom:12px;
+}
+
+.project {
+float:left;
+margin:0 20px 24px 0;
+width:220px;
+}
+
+/*----------------------------------HOME------------------------------------*/
+
+#callout_block {
+float:left;
+width:940px;
+margin-left: 5px;
+}
+#recent_work {
+float:left;
+width:450px;
+}
+#recent_activity {
+display:inline;
+float:left;
+margin-left: 30px;
+margin-right:20px;
+width:340px;
+}
+.activity {
+float:left;
+padding-bottom:8px;
+width:340px;
+}
+ .featured.activity .activity_info {
+float:right;
+width:220px;
+text-align: justify;
+}
+.featured.activity a{color:white;}
+.featured.activity a:hover{color:white;}
+#partners {
+float:left;
+margin-top:24px;
+width:290px;
+}
+.video {
+float:left;
+width:280px;
+}
+#featured_video {
+float:left;
+width:280px;
+}
+
+#inside_hashrocket {
+display:inline;
+float:left;
+margin-right:10px;
+width:220px;
+}
+.inside_callout {
+float:left;
+padding-bottom:8px;
+width:220px;
+}
+
+#partners ul li.even {
+margin:0;
+}
+
+#partners ul li {
+display:inline;
+float:left;
+margin-right:20px;
+width:160px;
+}
+
+
+h1 {
+font-size:36px;
+line-height:40px;
+}
+
+h1, h2, h3, h4, h5 {
+color:#333333;
+font-weight:bold;
+letter-spacing:-1px;
+}
+
+ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fieldset, input {
+margin:0;
+padding:0;
+}
+
+/*------------------------------WORK--------------------------------------*/
+
+#work {
+float:right;
+width:720px;
+}
+.project {
+float:left;
+margin:0 10px 24px 0;
+width:220px;
+}
+.project a{color:white;}
+.project a:hover{color:white;}
+
+
+/*-----------------------SERVICES-------------------------------------*/
+
+#services {
+float:right;
+width:730px;
+}
+.service {
+float:left;
+margin-bottom:24px;
+width:700px;
+}
+.service a{color:white;}
+.service a:hover{color:white;}
+.service_info {
+float:right;
+width:470px;
+}
+#experts {
+float:left;
+width:700px;
+margin:48px 0 0;
+}
+.expert {
+display:inline;
+float:left;
+margin-right:20px;
+width:160px;
+}
+
+/*--------------------------BLOG-----------------------------------*/
+
+#blog {
+float:right;
+width:730px;
+}
+.blog_entry {
+float:left;
+margin-bottom:24px;
+width:700px;
+}
+.blog_avatar {
+float:left;
+width:100px;
+}
+.blog_avatar a{color:white;}
+.blog_avatar a:hover{color:white;}
+.blog_info {
+float:right;
+width:590px;
+}
+.blog_info a{color:black;}
+.blog_info a:hover{color:white;}
+
+/*-------------------------------VIDEO----------------------------*/
+
+.videos {
+              width:900px;
+              height:168px; 
+              margin-top:20px; 
+              margin-left:150px;
+     
+}
+
+#video_header {
+float:left;
+width:940px;
+}
+#video_container {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:#EEEEEE none repeat scroll 0 0;
+float:left;
+padding:20px;
+width:600px;
+}
+#video_nav {
+float:left;
+margin:24px 0;
+padding:20px;
+width:900px;
+}
+.vimeoBadge {
+margin:0;
+padding:0;
+}
+.vimeoBadge .clip {
+float:left;
+line-height:0;
+margin:0 10px 10px 0;
+padding:0;
+width:170px;
+}
+.vimeoBadge #vimeo_badge_logo {
+height:16px;
+margin-top:10px;
+width:57px;
+}
+/*..........aboutus start................ */
+
+
+
+.aboutus_headding{width:600px; height:30px;  background-image:url(../images/about_headding.jpg);}
+
+.about_news{width:272px; height:168px; float:right;  margin-left:10px; margin-top:15px;}
+
+.bootam_right{width:272px; height:100px;float: left; font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #999999;}
+
+.middle_topblock_about{width:900px; height:390px; margin-top:0px; margin-left:10px;}
+
+p{color:#999999; text-align:justify; margin-left:5px; font-size:12px; }
+
+.top_about{width:600px; height:270px;  margin-top:15px; font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #999999;}
+
+.header_aboutus{width:892px; height:92px; background-image:url(../images/about_flash.jpg); margin-top:25px; margin-left:15px; background-repeat:no-repeat;}
+
+#headermain_aboutus{width:920px; height:170px; margin:auto; background-image:url(../images/about_flash_bg.jpg); background-repeat:no-repeat;}
+.Aboutmain
+{ display:block;
+  background:none;
+  float:left;
+  margin-bottom:50px;
+  margin-right:50px;
+  width:130px;
+  height:135px;
+
+ }
+ .Aboutimg
+ {
+ float:left;
+ margin-top:9px;
+ margin-left:0px;
+ margin-right:2px;
+ width:90px;
+ height:117px;
+ }
+
+ #flash_notice, #flash_error {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#flash_error {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 8px;
+}
+
+#errorExplanation ul {
+  margin: 2px 24px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: disc;
+}

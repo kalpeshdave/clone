@@ -1,0 +1,52 @@
+<% content_for :head do %>
+<%= javascript_include_tag "jquery" %>
+<%= javascript_include_tag "easySlider1.5" %>
+<%= stylesheet_link_tag "screen" %>
+<script type="text/javascript">
+		$(document).ready(function(){	
+			$("#slider").easySlider({
+				auto: true,
+				continuous: true 
+			});
+		});	
+</script>
+<% end %>
+
+
+
+<div id="container1">
+<div id="content">
+  <h1><%=h @work.project_name %></h1><br />
+<div id="slider">
+<ul>
+<% for image in @work.images %>
+   <li><%= image_tag image.work_data.url, :size => "696x360" %></li>
+<% end %>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+
+ <% if current_admin %>
+ <p>
+  Admin Actions:
+  
+  <%= link_to 'Delete', work_path(@work), :method => :delete, :confirm => "Are you sure?" %>
+</p>
+<% end %>
+  
+<div id="experts" style="margin-left: 60px;">
+  <h2>RELATED EXPERTS</h2>
+<%@interconnects.each do |inter|%>
+
+  <div class="expert first">
+<%=image_tag inter.person.person_photo.url, :size => '150x150'%>
+  </div>
+<%end%>
+
+
+</div>
+

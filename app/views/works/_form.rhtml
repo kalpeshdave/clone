@@ -1,0 +1,33 @@
+<%= f.error_messages %>
+<table>
+  <tr>
+    <td><%= f.label :project_name %></td>
+     <td>&nbsp;&nbsp;&nbsp;</td>
+    <td><%= f.text_field :project_name %></td>
+  </tr>
+  
+  <tr>&nbsp;</tr>
+  <tr>
+    <td><label for="work_market">Market-Type</label>:</td>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <td><%= collection_select(:work,:market_id,@markets,:id,:name) %></td>
+  </tr>
+  <tr>&nbsp;</tr>
+  <tr>
+    <td><label for="work_experience">Experience-Type</label>:</td>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <td><%= collection_select(:work,:experience_id,@experiences,:id,:name) %></td>
+  </tr>
+  <tr>&nbsp;</tr>
+</table>
+<div class="work_images">
+  <%= render :partial => 'work_image', :collection => @work.images %>
+</div>
+
+<div id="images">
+  <%= render :partial => 'image', :collection => @work.images %>
+</div>
+
+<%= link_to_function "Add Image" do |page|
+  page.insert_html :bottom, :images, :partial => 'image', :object => Image.new
+end %>

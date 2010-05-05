@@ -1,0 +1,13 @@
+<%form_for(@interservice) do |f|%>
+<p>
+<%= f.hidden_field :person_id, :value => @person.id%>
+</p>
+<p>
+  <label for="work_name">work</label>:
+  <%= collection_select(:interservice,:service_id,@services,:id,:name)%>
+</p>
+<p>
+ <%= f.submit 'create' %>
+</p>
+<% end %>
+

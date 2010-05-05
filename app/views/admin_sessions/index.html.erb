@@ -1,0 +1,14 @@
+<% if current_admin %>
+ <p>
+  Admin Actions for People:
+  <%= link_to 'New', new_person_path(@person) %> 
+</p>
+<p>
+  Admin Actions for work:
+  <%= link_to 'New', new_work_path(@work) %> 
+</p>
+<p>
+  Admin Actions for services:
+  <%= link_to 'New', new_service_path(@service) %> 
+</p>
+<% end %>

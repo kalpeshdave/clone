@@ -1,0 +1,15 @@
+<% form_for(@interconnect) do |f| %>
+
+<p>
+<%= f.hidden_field :person_id, :value => @person.id%>
+</p>
+<p>
+  <label for="Service_name">Services</label>:
+  <%= collection_select(:interconnect,:service_id,@services,:id,:name)%>
+</p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', interconnects_path %>

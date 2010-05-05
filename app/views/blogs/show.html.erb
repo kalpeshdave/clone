@@ -1,0 +1,42 @@
+
+
+<div class="bootam_block2">
+<div class="bootam_right">
+ <h2>CATAGORY</h2>
+<%= link_to 'Desigin', :action => 'catagory', :id => 1 %><br />
+<%= link_to 'Misc', :action => 'catagory', :id => 2 %><br />
+<%= link_to 'News & Announcements', :action => 'catagory', :id => 3 %><br />
+<%= link_to 'Video', :action => 'catagory', :id => 4 %><br />
+
+</div>
+</div>
+
+<div id="blog">
+<%= render :partial => 'allblogs' %>
+
+<% if current_admin %>
+    <p>
+  Admin Actions:
+  <%= link_to 'Edit', edit_blog_path(@blogs) %> |
+  <%= link_to 'Delete', blog_path(@blog), :method => :delete, :confirm => "Are you sure?" %>
+</p>
+<% end %>
+
+<h2> Comments</h2>
+<% if @comments.empty? %>
+<p> No Comments Yet </p>
+<%else%>
+
+<div id ="comments">
+<%=render :partial => @blog.comments%>
+</div>
+<%end%>
+
+<br />
+<h2>Add Comments</h2>
+
+<% form_for [@blog, Comment.new] do |f| %>
+  <%=render :partial => 'comments/form',  :locals => { :f => f } %>
+<%=f.submit "Submit Comment"%>
+<%end%>
+</div>

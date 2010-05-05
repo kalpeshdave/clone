@@ -1,0 +1,61 @@
+
+<div class="bootam_block2">
+<div class="bootam_right">
+ <h2>How We Do Things</h2>
+<%= link_to 'Services', :action => 'index' %><br />
+<%= link_to 'Process', :action => 'index' %><br />
+</div>
+</div>
+
+<div id="services">
+  <div class="service">
+<%=link_to (image_tag @service.services_photo.url), :controller => 'services', :action => 'index' %>
+    <div class="service_info">
+    <h1><%=h @service.name %></h1>
+  <%=h @service.description %>
+    </div>
+ </div>
+</div>
+
+ <% if current_admin %>
+    <p>
+  Admin Actions:
+  <%= link_to 'Edit', edit_service_path(@service) %> |
+  <%= link_to 'Delete', service_path(@service), :method => :delete, :confirm => "Are you sure?" %>
+</p>
+<% end %>
+
+<div id="work">
+  <h2>RECENT WORK</h2><br />
+ <%for work in @works%>
+<div class="project first">
+  <% @image= Image.find(:first,:conditions => {:work_id => work.id})%>
+        <%=link_to (image_tag @image.work_data.url, :size => '220x140'),:controller => 'works',:action => 'show' , :id => work.id %>
+  <h3><%=h work.project_name.capitalize %></h3>
+</div>
+<% end %>
+</div>
+
+<div id="exports">
+  <h2>EXPERTS IN ART DIRECTION & UI</h2><br />
+<%@interservices.each do |inter|%>
+  <div class="expert">
+<%=image_tag inter.person.person_photo.url, :size => '150x150'%>
+    <h3><%=h inter.person.name %></h3>
+<%=h inter.person.description %>
+  </div>
+<%end%>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+

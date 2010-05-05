@@ -1,0 +1,6 @@
+<% @work.images.each do | photo | %>
+  <div class="album_photos">
+    <%= image_tag(photo.work_data.url(:thumb), :alt => '') %>
+    <%= check_box_tag "image_ids[]", image.id %>
+  </div>
+<% end unless @work.images.first.new_record? rescue nil %>

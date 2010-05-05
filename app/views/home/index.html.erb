@@ -1,0 +1,51 @@
+
+  <div id="callout_block">
+   &nbsp;<h2>RECENT WORKS</h2><br />
+   <%for work in @works%>
+    <% @image= Image.find(:first,:conditions => {:work_id => work.id})%>
+   <div class="project">
+    <%=link_to (image_tag @image.work_data.url, :size => '200x150'), :controller => 'works', :action => 'show' , :id => work.id %>       
+   <h3><%=h work.project_name.capitalize %></h3>
+   </div>
+<% end %>
+ </div>
+
+
+<div id="recent_activity">
+  <h2>RECENT ACTIVITY</h2><br />
+      <%for blog in @blogs%>
+  <div class="featured activity">
+       <%= link_to (image_tag blog.person.person_photo.url, :size => '70x100'),
+           :controller => 'people', :action => 'show', :id => blog.person.id %>
+    <div class="activity_info">
+    <h3><%= blog.title.capitalize %></h3>
+   By <b><%= blog.person.name.capitalize %></b>
+   <br /> <p><%=h blog.body %></p>
+  </div>
+  </div>
+  <br />
+       <% end %>
+</div>
+
+<div id="inside_hashrocket">
+  <div class="inside_callout">
+    <%= image_tag("numbers.png", :size => "220x450") %>
+  </div>
+</div>
+		     
+
+<div id="featured_video">
+<h2>FEATURED VIDEO</h2>
+<br />
+<div class="video">
+          <%= render :partial => 'home/video' %>
+          <h3>Client Profile</h3>
+         <p>Patrick talks about his experience working with the Hashrocket team and about his company And Basta Club, Inc.</p>
+</div>
+
+
+<div id="partners">
+  <h2>FEATURED PARTNERS</h2>
+  
+</div>
+</div>

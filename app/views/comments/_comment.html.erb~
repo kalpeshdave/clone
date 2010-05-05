@@ -1,0 +1,10 @@
+
+<% div_for comment do   %>
+
+<p>
+  <strong><%#= time_ago_in_word(comment.created_at)   %></strong><br/>
+<h4><%= h(comment.name) %></h4><br/>
+  <%= h(comment.comment) %>
+</p>
+
+<%end%>

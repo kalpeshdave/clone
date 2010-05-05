@@ -1,0 +1,21 @@
+
+
+<% @people.each do |person| %>
+   <div class="person first">
+       <%= link_to (image_tag person.person_photo.url, :size => '135x160'), :action => 'show', :id => person.id %>
+       <%=h person.name %>
+   </div>
+      
+<% end %>
+
+  
+
+<% if current_admin %>
+ <p>
+  Admin Actions:
+  <%= link_to 'New', new_person_path(@person) %> |
+
+</p>
+<% end %>
+
+

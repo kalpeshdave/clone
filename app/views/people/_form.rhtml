@@ -1,0 +1,31 @@
+<p>
+  <%= f.label 'Name' %><br />
+  <%= f.text_field :name %>
+</p>
+<p>
+  <%= f.label 'Designation' %><br />
+  <%= f.text_field :designation %>
+</p>
+&nbsp;
+<p>
+  <label for="person_type">Type</label>:
+  <%= collection_select(:person,:type_id,@types,:id,:name) %>
+</p>
+&nbsp;
+<p>
+  <label for="person_location">Location</label>:
+  <%= collection_select(:person,:location_id,@locations,:id,:name) %>
+</p>
+&nbsp;
+<p>
+  <%= f.label 'Title' %><br />
+  <%= f.text_field :title %>
+</p>
+<p>
+  <%= f.label 'Description' %><br />
+  <%= f.text_area :description, :size => '50X1000'  %>
+</p>
+<p>
+  <%= f.label 'Photo' %><br />
+  <%= f.file_field :person_photo %>
+</p>

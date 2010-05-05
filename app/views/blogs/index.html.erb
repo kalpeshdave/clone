@@ -1,0 +1,29 @@
+
+<div class="bootam_block2">
+<div class="bootam_right">
+  <div class="sidebar_bg">
+<div class="sidebar_btn">
+ <h2>CATEGORY</h2>
+<%= link_to 'Design', :action => 'catagory', :id => 1 %><br />
+<%= link_to 'Misc', :action => 'catagory', :id => 2 %><br />
+<%= link_to 'News & Announcements', :action => 'catagory', :id => 3 %><br />
+<%= link_to 'Video', :action => 'catagory', :id => 4 %><br />
+</div>
+</div>
+</div>
+</div>
+<div id="blog">
+<%= render :partial => 'allblogs' %>
+</div>
+
+
+<%#*For Admin%>
+<% if current_admin %>
+ <p>
+  Admin Actions:
+  <%= link_to 'New', new_blog_path(@blog) %> |
+
+</p>
+<% end %>
+
+

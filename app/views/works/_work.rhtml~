@@ -1,0 +1,25 @@
+
+
+
+
+        <%for work in @works%>
+        <% @image= Image.find(:first,:conditions => {:work_id => work.id})%>
+              <div class="Aboutmain">
+               <div class="Aboutimg">
+              <%=link_to (image_tag @image.work_data.url, :size => '100x100'),
+                :action => 'show' , :id => work.id %>
+              <%=h work.project_name.capitalize %>
+               </div>
+              </div>
+        <% end %>,
+        <% if current_admin %>
+ <p>
+  Admin Actions:
+  <%= link_to 'New', new_work_path(@work) %> |
+
+</p>
+<% end %>
+  
+ 
+    
+  
